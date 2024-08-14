@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Brooklyn College Printing Service</title>
+	<link rel="stylesheet" href="PrintStyles.css">
+	<script src="PrintCode.js"></script>
+</head>
+
+<body>
+<h1 class = "title">Brooklyn College Printing Service</h1>
+
+<div class = "display">
+<div class = "documentdisplay">
+<div class = "document" id = "document">
+	<p class = "placeholdertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis erat turpis. Proin pulvinar quam ut turpis consequat, at vestibulum mi gravida. Etiam gravida lectus nec tortor tristique tristique. Cras ut lorem consectetur, ullamcorper est sit amet, placerat justo. Cras dignissim orci nisi, non molestie erat cursus sed. Pellentesque porta mi id pellentesque fermentum. Vestibulum lacinia tincidunt felis vel blandit. Praesent laoreet euismod ex, nec bibendum leo convallis ac. Vestibulum vel tempus justo. Etiam semper venenatis tellus, ac commodo justo lacinia vel. Vestibulum sit amet rhoncus urna. Vivamus in rutrum arcu, id hendrerit mauris.</p>
+	<img src ="landscapecolor.jpeg" class = "placeholderimage" id = "placeholderimg">
+</div>
+</div>
+<div class = "printsettings">
+<h2>Print Settings:</h2>
+<div class = "menuItem">
+	<div class = "label">Destination</div>
+	<div class = "dropdown">
+	<select name = "printers" id="printers" class = "dropdownItem">
+		<option value="printer1">BC_Printer_1</option>
+		<option value="printer2">BC_Printer_2</option>
+		<option value="printer3">BC_Printer_3</option>
+	</select>
+	</div>
+</div>
+<div class = "menuItem">
+	<div class = "label">Pages</div>
+	<div class = "dropdown">
+	<select name = "pages" id="pages" class = "dropdownItem">
+		<option value="all">All</option>
+		<option value="even">Even Pages Only</option>
+		<option value="odd">Odd Pages Only</option>
+	</select>
+</div>
+</div>
+<div class = "menuItem">
+	<div class = "label">Copies</div>
+	<div class = "dropdown">
+	<input type = "number" id = "copyNum" name = "copies" value = "1" class = "copier dropdownItem">
+	</div>
+</div>
+<div class = "menuItem">
+	<div class = "label">Layout</div>
+	<div class = "dropdown">
+	<select name = "layout" id="layout" class = "dropdownItem" onchange = changeLayout()>
+		<option value="portrait">Portrait</option>
+		<option value="landscape">Landscape</option>
+	</select>
+	</div>
+</div>
+<div class = "menuItem">
+	<div class = "label">Color</div>
+	<div class = "dropdown">
+	<select name = "color" id="color" class = "dropdownItem" onchange = "changeImage()">
+		<option value="color">Color</option>
+		<option value="baw">Black and White</option>
+	</select><br>
+	</div>
+</div>
+<div class = "menuItem">
+	<button type = "button" class = "printbutton" onclick = "finalPage()">Print Files</button>
+</div>
+<div class = "submits menuItem">
+	<button class = "addmore" type = "button" onclick = "addMore()">Add More Files</button>
+	<button class = "logout" type = "button" onclick = "logOut()">Log Out</button>
+</div>
+</div>
+</div>
+</body>
+</html>
